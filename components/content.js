@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Link from 'next/link';
 
 class Content extends Component {
     render() {
@@ -286,12 +287,19 @@ class Content extends Component {
                                         <ul className="top-info">
                                             <li><i className="fa fa-calendar"></i>Available 6 July</li>
                                         </ul>
+                                        <blog></blog>
 
-                                        <h4><a href="blog-detail.html">The city life</a><p>West Beleriand, Mordor</p>
+                                        <h4>
+                                            <Link href="./blog">The city life</Link>
+                                            <p>West Beleriand, Mordor</p>
                                         </h4>
+
                                     </li>
                                 </ul>
-                                <p className="center"><a className="btn btn-fullcolor" href="#">More deals</a></p>
+                                <p className="center">
+                                    <Link className="btn btn-fullcolor" href="./blog">
+                                    More deals</Link>
+                                </p>
                             </div>
 
 

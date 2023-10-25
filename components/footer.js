@@ -100,6 +100,15 @@ class Footer extends Component {
                         </div>
                     </div>
                 </div>
+                <script src="../public/js/common.js"></script>
+                <script type="text/javascript" src="../public/js/common/jquery-1.11.1.min.js"></script>
+                <script type="text/javascript" src="../public/js/common/bootstrap.min.js"></script>
+                <script type="text/javascript" src="../public/js/common/bootstrap-datepicker.js"></script>
+                <script type="text/javascript" src="../public/js/common/chosen.min.js"></script>
+                <script type="text/javascript" src="../public/js/common/bootstrap-checkbox.js"></script>
+                <script type="text/javascript" src="../public/js/common/nice-scroll.js"></script>
+                <script type="text/javascript" src="../public/js/common/jquery-browser.js"></script>
+                <script type="text/javascript" src="../public/js/scripts.js"></script>
 
             </div>
         );

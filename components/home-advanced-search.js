@@ -1,6 +1,45 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+import DatePicker from 'react-datepicker';
+import "react-datepicker/dist/react-datepicker.css";
+
+class CustomDateInput extends React.Component {
+    render() {
+        return (
+            <div className='form-control-small' >
+                <input
+                    className="form-control form-control-sm"
+                    type="text"
+                    value={this.props.value}
+                    onClick={this.props.onClick}
+                    readOnly
+                    placeholder="Arrive on..."
+                />
+                {/*<div className="input-group-addon calendar-icon-container" onClick={this.props.onClick}>*/}
+                {/*    <span className="glyphicon glyphicon-calendar"></span>*/}
+                {/*</div>*/}
+            </div>
+        );
+    }
+}
 
 class HomeAdvancedSearch extends Component {
+    constructor() {
+        super();
+        this.state = {
+            selectedOption: '',
+            startDate: null
+        };
+    }
+
+    handleSelectChange = (event) => {
+        this.setState({ selectedOption: event.target.value });
+    };
+
+    handleDateChange = (date) => {
+        this.setState({
+            startDate: date
+        });
+    };
     render() {
         return (
             <div id="home-advanced-search" className="open">
@@ -11,18 +50,27 @@ class HomeAdvancedSearch extends Component {
                             <form>
                                 <div className="form-group">
                                     <div className="form-control-small">
-                                        <div className='input-group date chzn-container' data-datepicker>
-                                            <input placeholder="Arrive on..." type='text' className="form-control"
-                                                   data-date-format="DD/MM/YYYY"/>
-                                            <span className="input-group-addon">
-											<span className="glyphicon glyphicon-calendar"></span>
-										</span>
-                                        </div>
+
+                                        <DatePicker
+                                            selected={this.state.startDate}
+                                            onChange={this.handleDateChange}
+                                            dateFormat="dd/MM/yyyy"
+                                            customInput={<CustomDateInput />}
+
+                                        />
+
                                     </div>
 
+
                                     <div className="form-control-small">
-                                        <select id="search_status" name="search_status" data-placeholder="Stay...">
-                                            <option value=""></option>
+                                        <select
+                                            id="search_status"
+                                            name="search_status"
+                                            value={this.state.selectedOption}
+                                            onChange={this.handleSelectChange}
+                                            className="form-control form-control-sm"
+                                        >
+                                            <option value="" selected disabled>Stay...</option>
                                             <option value="1">1 Night</option>
                                             <option value="2">2 Nights</option>
                                             <option value="3">3 Nights</option>
@@ -41,8 +89,14 @@ class HomeAdvancedSearch extends Component {
                                     </div>
 
                                     <div className="form-control-small">
-                                        <select id="search_bedrooms" name="search_bedrooms" data-placeholder="Bedrooms">
-                                            <option value=""></option>
+                                        <select
+                                            id="search_bedrooms"
+                                            name="search_bedrooms"
+                                            value={this.state.selectedOption}
+                                            onChange={this.handleSelectChange}
+                                            className="form-control form-control-sm"  // 添加这个类
+                                        >
+                                            <option value="" disabled>Bedrooms</option>
                                             <option value="0">0</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
@@ -52,6 +106,7 @@ class HomeAdvancedSearch extends Component {
                                             <option value="5plus">5+</option>
                                         </select>
                                     </div>
+
                                     <div className="form-control-large">
                                         <input type="text" className="form-control" name="location"
                                                placeholder="City, State, Country, etc..."></input>
