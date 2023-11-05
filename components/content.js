@@ -290,7 +290,7 @@ class Content extends Component {
                                         <ul className="top-info">
                                             <li><i className="fa fa-calendar"></i>Available 6 July</li>
                                         </ul>
-                                        <blog></blog>
+                                        {/*<blog></blog>*/}
 
                                         <h4>
                                             <Link href="./blog">The city life</Link>
