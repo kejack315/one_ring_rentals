@@ -250,7 +250,8 @@ class Content extends Component {
                                             <li><i className="fa fa-calendar"></i>Available Now</li>
                                         </ul>
 
-                                        <h4><a href="blog-detail.html">Private Beach</a><p>Lossarnach, Eriado</p></h4>
+                                        <h4><a href="blog-detail.html">Private Beach</a></h4>
+                                        <p>Lossarnach, Eriado</p>
                                     </li>
                                     <li className="col-md-12">
                                         <div className="image">
@@ -262,8 +263,9 @@ class Content extends Component {
                                             <li><i className="fa fa-calendar"></i>Available on 24 July</li>
                                         </ul>
 
-                                        <h4><a href="blog-detail.html">Mountain views</a><p>Hyarnustar, Rhovanion</p>
+                                        <h4><a href="blog-detail.html">Mountain views</a>
                                         </h4>
+                                        <p>Hyarnustar, Rhovanion</p>
                                     </li>
                                     <li className="col-md-12">
                                         <div className="image">
@@ -275,8 +277,9 @@ class Content extends Component {
                                             <li><i className="fa fa-calendar"></i>Available 5 July</li>
                                         </ul>
 
-                                        <h4><a href="blog-detail.html">Heart of the village</a><p>Minhiriath,
-                                            Eriador</p></h4>
+                                        <h4><a href="blog-detail.html">Heart of the village</a></h4>
+                                        <p>Minhiriath,
+                                            Eriador</p>
                                     </li>
                                     <li className="col-md-12">
                                         <div className="image">
@@ -291,8 +294,8 @@ class Content extends Component {
 
                                         <h4>
                                             <Link href="./blog">The city life</Link>
-                                            <p>West Beleriand, Mordor</p>
                                         </h4>
+                                        <p>West Beleriand, Mordor</p>
 
                                     </li>
                                 </ul>
